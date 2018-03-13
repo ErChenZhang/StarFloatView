@@ -14,7 +14,11 @@
     <com.smoke.zhangchen.floatviewlib.FloatView
         android:id="@+id/float_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        app:childTextColor="#ff0000"
+        app:defaultViewText="正在生成中"
+        app:parentViewBackground="@mipmap/star_bg"
+        app:childViewBackground="@drawable/shape_circle">
     </com.smoke.zhangchen.floatviewlib.FloatView>
 
 </android.support.constraint.ConstraintLayout>

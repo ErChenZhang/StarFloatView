@@ -24,16 +24,16 @@ public class MainActivity extends AppCompatActivity {
 
     private void init() {
             List<Float> list = new ArrayList<>();
-            list.add((float) 1.245);
-            list.add((float) 1.567);
-            list.add((float) 0.261);
-            list.add((float) 2.455);
-            list.add((float) 4.643);
-            list.add((float) 3.211);
-            list.add((float) 1.425);
-            list.add((float) 1.043);
-            list.add((float) 0.221);
-            list.add((float) 0.455);
+//            list.add((float) 1.245);
+//            list.add((float) 1.567);
+//            list.add((float) 0.261);
+//            list.add((float) 2.455);
+//            list.add((float) 4.643);
+//            list.add((float) 3.211);
+//            list.add((float) 1.425);
+//            list.add((float) 1.043);
+//            list.add((float) 0.221);
+//            list.add((float) 0.455);
             floatview.setList(list);
            floatview.setOnItemClickListener(new FloatView.OnItemClickListener() {
                @Override

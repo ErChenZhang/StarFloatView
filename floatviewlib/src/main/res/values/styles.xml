@@ -1,0 +1,11 @@
+<resources>
+
+    <declare-styleable name="myFloatView">
+        <attr name="parentViewBackground" format="reference"/>
+        <attr name="childViewBackground" format="reference"/>
+        <attr name="childTextColor" format="color"/>
+        <attr name="defaultViewText" format="string"/>
+    </declare-styleable>
+
+
+</resources>
