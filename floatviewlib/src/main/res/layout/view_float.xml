@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/float_view"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:gravity="center"
+        android:text="0.01234"
+        android:textSize="6dp"
+        android:textColor="#ffffff"
+        android:background="@drawable/shape_circle"/>
