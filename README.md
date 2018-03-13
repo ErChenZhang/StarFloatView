@@ -15,7 +15,7 @@
     }
     
 ## 使用方法：
-    ### 在布局文件中使用
+  ### 在布局文件中使用
     
          <com.smoke.zhangchen.floatviewlib.FloatView
             android:id="@+id/float_view"
@@ -26,12 +26,12 @@
             app:parentViewBackground="@mipmap/star_bg"
             app:childViewBackground="@drawable/shape_circle">
             
-        1. **childTextColor**:小球文字颜色大小
-        2. **defaultViewText**:默认小球显示文字
-        3. **parentViewBackground**：整体背景
-        4. **childViewBackground**：小球背景
+1. **childTextColor**:小球文字颜色大小
+2. **defaultViewText**:默认小球显示文字
+3. **parentViewBackground**：整体背景
+4. **childViewBackground**：小球背景
         
-    ### 设置数据
+   ### 设置数据
     
          List<Float> list = new ArrayList<>();
             list.add((float) 1.245);
@@ -46,7 +46,7 @@
             list.add((float) 0.455);
             floatview.setList(list);
             
-     ###小球点击回调
+  ### 小球点击回调
      
            floatview.setOnItemClickListener(new FloatView.OnItemClickListener() {
                @Override
