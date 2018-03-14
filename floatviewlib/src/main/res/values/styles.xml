@@ -5,6 +5,7 @@
         <attr name="childViewBackground" format="reference"/>
         <attr name="childTextColor" format="color"/>
         <attr name="defaultViewText" format="string"/>
+        <attr name="chidTextSize" format="dimension"/>
     </declare-styleable>
 
 

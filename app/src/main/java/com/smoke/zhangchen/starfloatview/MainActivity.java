@@ -24,23 +24,21 @@ public class MainActivity extends AppCompatActivity {
 
     private void init() {
             List<Float> list = new ArrayList<>();
-//            list.add((float) 1.245);
-//            list.add((float) 1.567);
-//            list.add((float) 0.261);
-//            list.add((float) 2.455);
-//            list.add((float) 4.643);
-//            list.add((float) 3.211);
-//            list.add((float) 1.425);
-//            list.add((float) 1.043);
-//            list.add((float) 0.221);
-//            list.add((float) 0.455);
+            list.add((float) 1.567);
+            list.add((float) 0.261);
+            list.add((float) 2.455);
+            list.add((float) 4.643);
+            list.add((float) 3.211);
+            list.add((float) 1.425);
+            list.add((float) 1.043);
+            list.add((float) 0.221);
+            list.add((float) 0.455);
             floatview.setList(list);
-           floatview.setOnItemClickListener(new FloatView.OnItemClickListener() {
-               @Override
-               public void itemClick(int position, float value) {
-                   Toast.makeText(MainActivity.this, "当前是第"+position+"个，其值是"+value, Toast.LENGTH_SHORT).show();
-               }
-           });
-
+        floatview.setOnItemClickListener(new FloatView.OnItemClickListener() {
+            @Override
+            public void itemClick(int position, Number value) {
+                Toast.makeText(MainActivity.this, "当前是第"+position+"个，其值是"+value.intValue(), Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }

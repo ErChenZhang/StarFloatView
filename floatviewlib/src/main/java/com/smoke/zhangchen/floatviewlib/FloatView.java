@@ -17,6 +17,8 @@ import android.view.animation.TranslateAnimation;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.smoke.zhangchen.floatviewlib.utils.ScreenSizeUtil;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -30,7 +32,7 @@ public class FloatView extends RelativeLayout {
     private static final long ANIMATION_DEFAULT_TIME = 2000;
     private static final String TAG = "FloatView";
     private Context mcontext;
-    private List<Float> mFloat;
+    private List<? extends Number> mFloat;
     private List<View> mViews = new ArrayList<>();;
     public RelativeLayout parentView;
     private int parentWidth;
@@ -41,6 +43,7 @@ public class FloatView extends RelativeLayout {
     private int childId;
     private int parentId;
     private String defaultViewText;
+    private float childSize;
 
     public FloatView(Context context) {
         this(context,null);
@@ -51,7 +54,8 @@ public class FloatView extends RelativeLayout {
         super(context, attrs);
         mcontext = context;
         TypedArray typedArray = getContext().obtainStyledAttributes(attrs, R.styleable.myFloatView);
-        textColor = typedArray.getColor(R.styleable.myFloatView_childTextColor, R.color.white);
+        textColor = typedArray.getColor(R.styleable.myFloatView_childTextColor, getResources().getColor(R.color.white));
+        childSize = typedArray.getDimension(R.styleable.myFloatView_chidTextSize, 6);
         childId = typedArray.getResourceId(R.styleable.myFloatView_childViewBackground, R.drawable.shape_circle);
         parentId = typedArray.getResourceId(R.styleable.myFloatView_parentViewBackground, R.mipmap.star_bg);
         defaultViewText = typedArray.getString(R.styleable.myFloatView_defaultViewText);
@@ -74,6 +78,7 @@ public class FloatView extends RelativeLayout {
         for (int i = 0; i < mFloat.size(); i++) {
             TextView floatview = (TextView) LayoutInflater.from(mcontext).inflate(R.layout.view_float, this, false);
             floatview.setTextColor(textColor);
+            floatview.setTextSize(childSize);
             floatview.setBackgroundResource(childId);
             floatview.measure(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
             floatview.setText(mFloat.get(i)+"");
@@ -107,6 +112,7 @@ public class FloatView extends RelativeLayout {
         defaultView = (TextView) LayoutInflater.from(mcontext).inflate(R.layout.view_float, this, false);
         params.addRule(RelativeLayout.CENTER_IN_PARENT);
         defaultView.setTextColor(textColor);
+        defaultView.setTextSize(childSize);
         defaultView.setText(defaultViewText);
         defaultView.setBackgroundResource(childId);
         if (mFloat.size() != 0){
@@ -137,7 +143,7 @@ public class FloatView extends RelativeLayout {
     }
 
     //设置数据添加子小球
-    public void setList(List<Float> list){
+    public void setList(List<? extends Number> list){
         this.mFloat = list;
         //使用post方法确保在UI加载完的情况下 调用init() 避免获取到的宽高为0
         post(new Runnable() {
@@ -170,7 +176,7 @@ public class FloatView extends RelativeLayout {
         if (mViews.size() == 0){
             defaultView.setVisibility(VISIBLE);
         }
-        mListener.itemClick((int)view.getTag(),Float.valueOf(((TextView)view).getText().toString()));
+        mListener.itemClick((int)view.getTag(),mFloat.get((int)view.getTag()));
     }
 
     private void animRemoveView(final View view) {
@@ -200,7 +206,7 @@ public class FloatView extends RelativeLayout {
     }
 
     public interface OnItemClickListener{
-        void  itemClick(int position, float value);
+        void  itemClick(int position, Number value);
     }
 
     public void setOnItemClickListener(OnItemClickListener listener){
