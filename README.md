@@ -1,6 +1,6 @@
 # StarFloatView
 
-![img](https://github.com/ErChenZhang/StarFloatView/blob/master/floatviewlib/src/main/res/drawable/readme_1.gif)
+![test image size](https://github.com/ErChenZhang/StarFloatView/blob/master/floatviewlib/src/main/res/drawable/readme_1.gif){:height="50%" width="25%"}
 
 ### 在工程目录的build.gradle中添加JitPack.io的代码仓库地址
 
