@@ -1,4 +1,9 @@
 # StarFloatView
+
+## 示例：
+<img src="https://github.com/ErChenZhang/StarFloatView/blob/master/floatviewlib/src/main/res/drawable/readme_1.gif" width = "350" height = "600" alt="截图" align=center />
+
+## 使用方法：
 ### 在工程目录的build.gradle中添加JitPack.io的代码仓库地址
 
     allprojects {
@@ -15,7 +20,7 @@
 	}
 
     
-## 使用方法：
+
   ### 在布局文件中使用
     
          <com.smoke.zhangchen.floatviewlib.FloatView
@@ -41,13 +46,6 @@
             list.add((float) 1.245);
             list.add((float) 1.567);
             list.add((float) 0.261);
-            list.add((float) 2.455);
-            list.add((float) 4.643);
-            list.add((float) 3.211);
-            list.add((float) 1.425);
-            list.add((float) 1.043);
-            list.add((float) 0.221);
-            list.add((float) 0.455);
             floatview.setList(list);
             
   ### 小球点击回调（value.floatValue()对应传入的list类型）
