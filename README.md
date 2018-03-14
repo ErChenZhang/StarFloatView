@@ -1,5 +1,6 @@
 # StarFloatView
-##示例：
+
+## 示例：
 <img src="https://github.com/ErChenZhang/StarFloatView/blob/master/floatviewlib/src/main/res/drawable/readme_1.gif" width = "350" height = "600" alt="截图" align=center />
 
 ## 使用方法：
