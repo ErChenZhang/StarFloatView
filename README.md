@@ -10,9 +10,10 @@
     
 ### 项目目录中的build.gradle中添加依赖
 
-    dependencies {
-            compile 'com.github.ErChenZhang:StarFloatView:v1.0'
-    }
+    ependencies {
+        compile 'com.github.ErChenZhang:StarFloatView:v1.1'
+	}
+
     
 ## 使用方法：
   ### 在布局文件中使用
