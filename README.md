@@ -2,6 +2,7 @@
 
 ## 示例：
 <img src="https://github.com/ErChenZhang/StarFloatView/blob/master/floatviewlib/src/main/res/drawable/readme_1.gif" width = "350" height = "600" alt="截图" align=center />
+#### 支持自定义背景，自定义小球颜色、大小、以及默认小球文字
 
 ## 使用方法：
 ### 在工程目录的build.gradle中添加JitPack.io的代码仓库地址
